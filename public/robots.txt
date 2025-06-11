@@ -1,0 +1,42 @@
+# robots.txt for https://infinityadventurenepal.com/
+# Last updated: April 2, 2025
+
+User-agent: *
+Allow: /
+Allow: /blogs/
+Allow: /about_us/
+Allow: /contact_us/
+Allow: /trek/
+Allow: /other_activities/
+
+# Allow access to dynamic routes
+Allow: /expedition/*
+Allow: /trek/*
+Allow: /blogs/*
+Allow: /other_activities/*
+
+# Allow PDF files
+Allow: /*.pdf$
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Disallow certain file types (excluding PDFs)
+Disallow: /*.doc$
+Disallow: /*.xls$
+
+# Prevent crawling of search results
+Disallow: /*?s=
+Disallow: /*?p=
+Disallow: /search/
+
+# Crawl-delay directive (in seconds) for bots that respect it
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://infinityadventurenepal.com/sitemap.xml
