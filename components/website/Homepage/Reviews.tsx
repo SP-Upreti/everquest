@@ -146,11 +146,11 @@ const TestimonialSection = () => {
                 {
                   idx == 0 ? (
                     <div className=" h-full pl-16 space-y-5">
-                      <h2 className="text-4xl font-semibold">
-                        <ParallaxText text="What our Client Says" />
-                        <ParallaxText text="About Us ?" />
+                      <h2 className="text-[5rem] font-semibold s">
+                        <ParallaxText text="Our   Clients," />
+                        <ParallaxText text="Their   Journeys, " />
+                        <ParallaxText text="Their   Words" />
                       </h2>
-                      <p className="max-w-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aspernatur, deserunt voluptatem accusamus eligendi eveniet beatae sit inventore dignissimos sapiente.</p>
                     </div>
                   ) : (
                     <div className="max-w-7xl mx-auto flex  lg:gap-20">

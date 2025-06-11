@@ -124,6 +124,16 @@ export default function Footer() {
           />
         </div>
       </motion.div>
+
+      <div className="absolute top-0 left-0 w-full h-full flex justify-end items-end">
+        <div className="w-full flex justify-between flex-wrap-reverse items-center p-6">
+          <p>© 2025 EVERQUEST. All Rights Reserved.</p>
+          <a href='https://www.webxnep.com/logo/logo.svg' className="  gap-3 cursor-pointer flex items-center">
+            <h2>Designed and  Developed by</h2>
+            <img src="https://www.webxnep.com/logo/logo.svg" width={60} alt="webx nepal" />
+          </a>
+        </div>
+      </div>
     </footer>
   )
 }
