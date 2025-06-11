@@ -42,39 +42,52 @@ const TestimonialSection = () => {
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
+
   const testimonials = [
-    {},
     {
-      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-      name: "Martin Escobar",
-      title: "Founder of Meta",
-      quote: "The service exceeded all my expectations. The team was professional, responsive, and delivered exceptional results. I'll definitely be using them again for future projects!"
+      avatar: "/testimonial/man.jpg",
+      name: "Daniel Foster",
+      title: "Adventure Blogger",
+      quote: "EverQuest Nepal gave me the trip of a lifetime! From trekking the Annapurna Circuit to exploring Pokhara's beauty, their service was flawless. Highly organized and passionate team!"
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-      name: "Angela Stian",
-      title: "Product Designer",
-      quote: "Working with this team transformed our digital presence. Their attention to detail and creative solutions helped us achieve a 40% increase in customer engagement."
+      avatar: "/testimonial/man.jpg",
+      name: "Emily Zhang",
+      title: "Photographer",
+      quote: "The Everest Base Camp trek arranged by EverQuest was breathtaking. The guides were experienced and incredibly helpful, making every moment safe and magical."
     },
     {
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-      name: "Karim Ahmed",
-      title: "DevOps Engineer",
-      quote: "The technical expertise demonstrated was impressive. They solved complex challenges efficiently and delivered a robust solution ahead of schedule."
+      avatar: "/testimonial/one.jpg",
+      name: "Carlos Mendes",
+      title: "Travel Enthusiast",
+      quote: "I’ve traveled to many countries, but Nepal with EverQuest was unforgettable. Their attention to detail and genuine hospitality made me feel like family."
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-      name: "Sophia Reynolds",
-      title: "Marketing Director",
-      quote: "Our campaign results were phenomenal! The strategic approach and creative execution drove a 75% increase in qualified leads. Highly recommend their services."
+      avatar: "https://cdn.pixabay.com/photo/2024/01/04/21/55/mountain-8488489_1280.jpg",
+      name: "Nina Patel",
+      title: "Content Creator",
+      quote: "EverQuest planned our entire honeymoon trek in the Langtang region, and it was pure bliss! The lodges, meals, and pace were perfect for us. Can’t wait to book another trip!"
     },
     {
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-      name: "James Wilson",
-      title: "Startup CEO",
-      quote: "As a startup, we needed partners who understood our vision. This team not only understood but helped us refine and execute it perfectly. Worth every penny!"
+      avatar: "https://cdn.pixabay.com/photo/2019/09/08/09/35/man-4460522_1280.jpg",
+      name: "Thomas Eriksson",
+      title: "Expedition Leader",
+      quote: "As someone who leads teams into extreme terrains, I was impressed by EverQuest's logistics and guide training. They are a top-tier Nepalese operator with a global mindset."
+    },
+    {
+      avatar: "https://randomuser.me/api/portraits/women/38.jpg",
+      name: "Lisa-Marie Jensen",
+      title: "Backpacker",
+      quote: "I joined a group trek to Mustang through EverQuest Nepal. The culture, the views, the people—beyond words! The agency made everything smooth and exciting."
+    },
+    {
+      avatar: "https://randomuser.me/api/portraits/men/22.jpg",
+      name: "Rajiv Sharma",
+      title: "Corporate Manager",
+      quote: "For our company retreat, EverQuest crafted a tailored travel experience blending business and adventure. The team’s professionalism and creativity were outstanding."
     }
   ];
+
 
   useEffect(() => {
     const testimonials = testimonialRefs.current;
@@ -149,7 +162,7 @@ const TestimonialSection = () => {
                       <h2 className="text-[5rem] font-semibold s">
                         <ParallaxText text="Our   Clients," />
                         <ParallaxText text="Their   Journeys, " />
-                        <ParallaxText text="Their   Words" />
+                        <ParallaxText text="Their   Words." />
                       </h2>
                     </div>
                   ) : (
@@ -161,11 +174,11 @@ const TestimonialSection = () => {
                           }}
 
                           whileInView={{
-                            width: "384px",
+                            width: "420px",
 
                           }}
 
-                          transition={{ delay: 0.5, duration: 0.3 }}
+                          transition={{ delay: 0.2, duration: 0.3 }}
                           className="inline-flex h-96  items-center justify-center w-96 flex-shrink-0 mx-auto rounded-md mb-6    overflow-hidden">
                           <img
                             src={item.avatar}

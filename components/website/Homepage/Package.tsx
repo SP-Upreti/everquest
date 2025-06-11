@@ -28,11 +28,11 @@ const ServicesHome = React.memo(function ServicesHome({ }: Props) {
               trigger: maincontainer.current,
               start: "top center",
               end: "bottom center",
-            scrub: 2,
+              scrub: 2,
               onLeave: () => gsap.to(btn, { scale: 1, duration: 0.3 }),
               onLeaveBack: () => gsap.to(btn, { scale: 1, duration: 0.3 }),
             },
-            stagger:3
+            stagger: 3
           });
       }
     });
@@ -41,41 +41,67 @@ const ServicesHome = React.memo(function ServicesHome({ }: Props) {
   const travelPackages = useMemo(() => [
     {
       id: 1,
-      title: "Explore Mountains",
-      image: "/ExpeditionPackage/Exp1.png",
-      category: "Mountaineering",
+      title: "Ice Climbing",
+      image: "https://images.pexels.com/photos/5779255/pexels-photo-5779255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      category: "Adventure Sports",
       activities: [
-        "Summit world-famous peaks with seasoned guides.",
-        "Experience high-altitude challenges safely.",
-        "Discover Nepal’s rugged alpine beauty.",
-        "Create stories that echo in the Himalayas.",
+        "Climb frozen waterfalls and icy cliffs.",
+        "Experience vertical ascents in harsh conditions.",
+        "Led by certified ice-climbing guides.",
+        "Challenge your limits in the heart of winter.",
       ],
     },
     {
       id: 2,
-      title: "Trek the Trails",
-      image: "/ExpeditionPackage/Exp2.png",
-      category: "Trekking",
+      title: "Rock Climbing",
+      image: "https://images.pexels.com/photos/27992636/pexels-photo-27992636/free-photo-of-a-stack-of-rocks-on-top-of-a-mountain-with-snow-capped-mountains-in-the-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      category: "Adventure Sports",
       activities: [
-        "Walk through rhododendron forests and villages.",
-        "Meet locals and understand Himalayan lifestyles.",
-        "Trek to iconic destinations like Everest Base Camp.",
-        "Experience both challenge and peace on trails.",
+        "Scale natural rock faces in scenic spots.",
+        "Choose routes from beginner to expert level.",
+        "Learn techniques from pro climbers.",
+        "Strengthen both body and mind outdoors.",
       ],
     },
     {
       id: 3,
-      title: "Discover Culture & Nature",
-      image: "/ExpeditionPackage/Exp3.png",
-      category: "Cultural Tours & Nature",
+      title: "Heli Tour",
+      image: "https://images.pexels.com/photos/12995176/pexels-photo-12995176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      category: "Aerial Adventure",
       activities: [
-        "Visit heritage sites in Kathmandu Valley.",
-        "Explore Chitwan’s wildlife and jungle safari.",
-        "Enjoy peaceful boat rides in Pokhara.",
-        "Immerse in Nepal’s vibrant festivals and traditions.",
+        "Soar over Everest, Annapurna & Langtang.",
+        "Land near high-altitude base camps.",
+        "Capture bird’s-eye views of glacial valleys.",
+        "Perfect for luxury and short-time travelers.",
+      ],
+    },
+    {
+      id: 4,
+      title: "Bungee & Paragliding",
+      image: "https://images.pexels.com/photos/28153230/pexels-photo-28153230/free-photo-of-sky-diving.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      category: "Extreme Thrill",
+      activities: [
+        "Leap from Nepal’s iconic suspension bridges.",
+        "Glide over Pokhara’s lakes and valleys.",
+        "Adrenaline-pumping and scenic in one ride.",
+        "International-standard safety ensured.",
+      ],
+    },
+    {
+      id: 5,
+      title: "Jungle Safari",
+      image: "https://images.pexels.com/photos/9206628/pexels-photo-9206628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      category: "Wildlife & Nature",
+      activities: [
+        "Track tigers, rhinos & elephants in Chitwan.",
+        "Explore national parks via jeep or canoe.",
+        "Birdwatching in lush biodiversity hotspots.",
+        "Experience Tharu culture & eco-resorts.",
       ],
     },
   ], []);
+
+
 
   return (
     <main ref={maincontainer} className="relative ">
@@ -112,18 +138,19 @@ const ServicesHome = React.memo(function ServicesHome({ }: Props) {
             </div>
 
 
-            <div className="flex justify-between  w-full items-center z-[99]">
-              <div className="flex text-[40px]">
-                <h1 className=" font-semibold">Package</h1>
-                <span className=" px-2">:</span>
+            <div className=" justify-between  w-full items-center z-[99] grid grid-cols-3">
+              <div className=""></div>
+              <div className="flex text-[30px]   text-left">
                 <h2 className=" font-semibold">{data.title}</h2>
-             
-              </div>
-              <button
 
-                className="text-white/50 text-white z-[999] flex gap-2 border text-lg h-20 w-32 rounded-full justify-center items-center">
-                View <ArrowRight />
-              </button>
+              </div>
+              <div className=" flex justify-end items-center">
+                <button
+
+                  className="text-white/50 text-white z-[999] flex gap-2 border border-white/20 text-lg h-20 w-32 rounded-full justify-center items-center">
+                  View <ArrowRight fill="#121212" />
+                </button>
+              </div>
             </div>
 
 

@@ -7,6 +7,8 @@ export default function Donations() {
     return (
         <section className='h-[150dvh]  relative'>
 
+            <div className="absolute top-0 left-0 w-full h-64 z-10 pointer-events-none bg-gradient-to-b from-[#121212] to-transparent" />
+
 
             {/* background woman */}
             <div className="h-full w-full absolute top-0 left-0 -z-30">
@@ -31,6 +33,8 @@ export default function Donations() {
                 </div>
 
             </div>
+
+            <div className="absolute bottom-0 left-0 w-full h-64 z-10 pointer-events-none bg-gradient-to-t from-black to-transparent" />
 
 
         </section>

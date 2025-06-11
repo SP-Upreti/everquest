@@ -21,7 +21,7 @@ interface HeroItem {
 
 const Slider: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [visibleItems, setVisibleItems] = useState(4);
+  const [visibleItems, setVisibleItems] = useState(6);
   // const { heroExpeditions, error } = useExpedition();
   const [isLoading, setIsLoading] = useState(true);
   const error = {
@@ -130,7 +130,7 @@ const Slider: React.FC = () => {
       </div>
 
       <div className={styles.list}>
-        {heroExpeditions.map((item, index) => (
+        {heroExpeditions.slice(0, visibleItems).map((item, index) => (
           <div
             key={item._id}
             className={`${styles.item} ${index === activeIndex ? styles.active : ""
@@ -140,8 +140,8 @@ const Slider: React.FC = () => {
             <Image
               src={item.banner}
               alt={`Slider ${index + 1}`}
-              width={1280}
-              height={720}
+              width={1480}
+              height={1020}
               objectFit="cover"
               priority
               className="object-cover h-full w-full "
@@ -158,7 +158,7 @@ const Slider: React.FC = () => {
               </div>
               <div className="py-4 title font-bold text-[28px]  xs:text-[40px] md:text-[60px]  leading-tight flex flex-col">
                 <h1 className="max-w-2xl">{item.name.split(" ")[0]} {item.name.split(" ")[1]}</h1>
-                <div className="flex gap-8 items-center my-4">
+                <div className="flex gap-8 items-center my-3">
                   <div className="text-xl flex gap-2 items-center">
                     <Mountain /> {item.maxElevation}
                   </div>

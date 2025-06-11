@@ -60,6 +60,7 @@ const Page = () => {
       ...base,
       minHeight: "44px",
       height: "44px",
+      background: "transparent"
     }),
     valueContainer: (base: any) => ({
       ...base,
@@ -279,7 +280,7 @@ const Page = () => {
       <div className="lg:w-8/12 w-11/12 mx-auto py-20">
         <form
           onSubmit={handleSubmit}
-          className="mt-8 bg-clip-padding bg-white border-2 border-primary2 md:p-8 p-2 rounded-md"
+          className="mt-8 bg-clip-padding bg-[#121212]  md:p-8 p-2 rounded-md"
         >
           <h2
             className="title uppercase font-extrabold text-center lg:text-3xl md:text-2xl text-lg whitespace-nowrap"
@@ -294,7 +295,7 @@ const Page = () => {
             Personal Details
           </h2>
 
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-10">
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center mt-10">
             <div className="flex flex-col gap-2">
               <label className="md:text-md text-sm font-semibold">
                 Full Name
@@ -304,10 +305,12 @@ const Page = () => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleInputChange}
-                className="border-2 outline-primary2 rounded-md p-2 text-black"
+                className="border-2 outline-primary2 rounded-md p-2 bg-transparent text-black"
                 required
               />
             </div>
+
+
             <div className="flex flex-col gap-2">
               <label className="md:text-md text-sm font-semibold">
                 Email Address
@@ -317,10 +320,12 @@ const Page = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="border-2 outline-primary2 rounded-md p-2 text-black"
+                className="border-2 outline-primary2 rounded-md p-2 bg-transparent text-black"
                 required
               />
             </div>
+
+
             <div className="flex flex-col gap-2">
               <label className="md:text-md text-sm font-semibold">
                 Phone No
@@ -368,7 +373,7 @@ const Page = () => {
                 styles={customStyles}
                 onChange={changeHandler}
                 placeholder="Select a country"
-                className="text-black text-xs sm:text-base"
+                className="text-black  fill-transparent text-xs sm:text-base bg-transparent"
               />
             </div>
           </section>
@@ -386,7 +391,7 @@ const Page = () => {
                     id="category"
                     value={selectedCategory}
                     onChange={handleCategoryChange}
-                    className="h-10 border mt-1 rounded px-4 w-full outline-none"
+                    className="h-10 border mt-1 rounded px-4 w-full outline-none bg-transparent"
                     required
                   >
                     <option value="">Select a Category</option>
@@ -405,7 +410,7 @@ const Page = () => {
                     id="subCategory"
                     value={selectedSubCategory}
                     onChange={handleSubCategoryChange}
-                    className="h-10 border mt-1 rounded px-4 w-full outline-none"
+                    className="h-10 border mt-1 rounded px-4 w-full outline-none bg-transparent fill-transparent"
                     required
                   >
                     <option value="">Select a Sub-Category</option>
@@ -425,7 +430,7 @@ const Page = () => {
                   id="expedition"
                   value={selectedExpedition}
                   onChange={handleExpeditionChange}
-                  className="h-10 border mt-1 rounded px-4 w-full outline-none"
+                  className="h-10 border mt-1 rounded px-4 w-full outline-none bg-transparent"
                   required
                 >
                   <option value="">Select an Expedition</option>
@@ -446,7 +451,7 @@ const Page = () => {
                     name="arrivalDate"
                     value={formData.arrivalDate}
                     onChange={handleInputChange}
-                    className="h-10 border mt-1 rounded px-4 w-full outline-none"
+                    className="h-10 border mt-1 rounded px-4 w-full outline-none bg-transparent"
                     required
                   />
                 </div>
@@ -458,7 +463,7 @@ const Page = () => {
                     name="departureDate"
                     value={formData.departureDate}
                     onChange={handleInputChange}
-                    className="h-10 border mt-1 rounded px-4 w-full outline-none"
+                    className="h-10 border mt-1 rounded px-4 w-full outline-none bg-transparent"
                     required
                   />
                 </div>
@@ -471,7 +476,7 @@ const Page = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="h-32 border mt-1 rounded px-4 w-full outline-none"
+                  className="h-32 border mt-1 rounded px-4 w-full outline-none bg-transparent"
                 />
               </div>
             </div>

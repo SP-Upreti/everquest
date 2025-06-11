@@ -10,7 +10,6 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import Button from "./ui/button";
 import { useCollections } from "@/context/Collections";
 import { useActivities } from "@/context/Activities";
-import { useRouter } from "next/navigation";
 import { IconParachute } from "@tabler/icons-react";
 
 interface Package {
@@ -265,7 +264,6 @@ const companyImages = [
 
 
 export default function Nav() {
-  const router = useRouter();
   const pathname = usePathname();
   const { collections } = useCollections();
   const { activities } = useActivities();
@@ -514,7 +512,7 @@ export default function Nav() {
             <div key={link.id} className="">
               <span
                 onMouseEnter={() => handleHoverLink(link.name)}
-                onClick={() => router.push(link.href)}
+
                 className={`nav-links ${pathname === link.href ? "text-purple-500" : "text-zinc-300"
                   } font-semibold items-center hover:text-purple-500 cursor-pointer flex gap-1`}
               >
@@ -544,7 +542,6 @@ export default function Nav() {
                           }}
 
                           key={companyLink.name}
-                          onClick={() => router.push(companyLink.href)}
                           className=""
                         >
                           <div className="h-36 cursor-pointer group relative rounded-lg overflow-hidden flex justify-center items-center bg-[#ffffff03]">
@@ -681,11 +678,11 @@ export default function Nav() {
                       >
                         <div className="pl-4 mt-2 text-[16px] flex flex-col">
                           {section.key === "company" && aboutlinks.map(item => (
-                            <Link key={item.name} href={item.path}>{item.name}</Link>
+                            <Link key={item.name} href={"#"}>{item.name}</Link>
                           ))}
 
                           {section.key === "services" && activities?.map(item => (
-                            <Link key={item._id} href={`/other_activities/${item.slug}`}>
+                            <Link key={item._id} href={`#`}>
                               {item.name}
                             </Link>
                           ))}
@@ -696,7 +693,7 @@ export default function Nav() {
                             organizedData[section.key]?.map(item => (
                               <Link
                                 key={item._id}
-                                href={`/${section.key === "mountaineering" ? "expedition" : "trek"}/#${item.name}`}
+                                href={`#`}
                               >
                                 {item.name}
                               </Link>
@@ -707,16 +704,16 @@ export default function Nav() {
                     </div>
                   ))}
 
-                  <Link href="/calendar">
+                  <Link href="#">
                     <h2 className="border-b border-white/50 pb-2">Calendar</h2>
                   </Link>
-                  <Link href="/blogs">
+                  <Link href="#">
                     <h2 className="border-b border-white/50 pb-2">Blogs</h2>
                   </Link>
-                  <Link href="/contact_us">
+                  <Link href="#">
                     <h2 className="border-b border-white/50 pb-2">Contact</h2>
                   </Link>
-                  <Link href="/customizetrip">
+                  <Link href="#">
                     <Button className="mt-4">Customize your Trip</Button>
                   </Link>
                 </nav>

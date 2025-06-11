@@ -34,6 +34,17 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: "https",
+        hostname: "cdn.pixabay.com",
+        pathname: "/**"
+      },
+
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+        pathname: "/**"
+      }
     ],
     // Allow both http and https protocols for images
     dangerouslyAllowSVG: true,

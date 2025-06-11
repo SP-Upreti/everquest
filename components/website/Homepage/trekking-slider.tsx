@@ -86,6 +86,7 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
                                     <div className="absolute bottom-0 p-4 space-y-4">
                                         <p>{data.description}</p>
                                         <div className="flex gap-4 items-center">
+                                            <button className='border px-6 py-2 rounded-md bg-[#DFB6FF] text-black'>Book Now</button>
                                             <button className='border px-6 py-2 rounded-md'>View More</button>
                                         </div>
                                     </div>
@@ -99,8 +100,8 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
 
 
             <div className="flex justify-between items-center absolute top-1/2 -translate-y-1/2 w-full">
-                <button onClick={onPrevButtonClick} className='size-16 bg-white/10 flex justify-center items-center rounded-full'><ChevronLeft className='size-12' /></button>
-                <button onClick={onNextButtonClick} className='size-16 bg-white/10 flex justify-center items-center rounded-full'><ChevronRight className='size-12' /></button>
+                <button onClick={onPrevButtonClick} className='size-16 bg-white/10 flex justify-center items-center rounded-'><ChevronLeft className='size-12' /></button>
+                <button onClick={onNextButtonClick} className='size-16 bg-white/10 flex justify-center items-center '><ChevronRight className='size-12' /></button>
             </div>
 
         </section >
