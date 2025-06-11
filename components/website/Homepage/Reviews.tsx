@@ -145,7 +145,7 @@ const TestimonialSection = () => {
               >
                 {
                   idx == 0 ? (
-                    <div className=" h-full pl-16 space-y-5">
+                    <div className=" h-full  space-y-5">
                       <h2 className="text-[5rem] font-semibold s">
                         <ParallaxText text="Our   Clients," />
                         <ParallaxText text="Their   Journeys, " />

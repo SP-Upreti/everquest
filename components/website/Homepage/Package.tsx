@@ -25,13 +25,14 @@ const ServicesHome = React.memo(function ServicesHome({ }: Props) {
           {
             scale: 1.1,
             scrollTrigger: {
-              trigger: btn,
+              trigger: maincontainer.current,
               start: "top center",
               end: "bottom center",
-              scrub: true,
+            scrub: 2,
               onLeave: () => gsap.to(btn, { scale: 1, duration: 0.3 }),
               onLeaveBack: () => gsap.to(btn, { scale: 1, duration: 0.3 }),
-            }
+            },
+            stagger:3
           });
       }
     });
@@ -93,9 +94,10 @@ const ServicesHome = React.memo(function ServicesHome({ }: Props) {
         {travelPackages.map((data, idx) => (
           <motion.div
 
-            transition={{ duration: 0.1 }}
-            whileHover={{
-              scale: 1.01
+            ref={el => {
+              if (el) {
+                buttonRefs.current[idx] = el
+              }
             }}
 
             className={`py-3 items-center  pl-10 pr-3 flex overflow-hidden max-w-7xl mx-auto   border border-white/10 relative rounded-full`} key={idx}>
@@ -115,17 +117,10 @@ const ServicesHome = React.memo(function ServicesHome({ }: Props) {
                 <h1 className=" font-semibold">Package</h1>
                 <span className=" px-2">:</span>
                 <h2 className=" font-semibold">{data.title}</h2>
-                <div className=" flex flex-col border-l border-white text-base mx-8 justify-center  pl-4 gap-1">
-                  <h1>First information sentence</h1>
-                  <h1>FiSecond  information sentence</h1>
-                </div>
+             
               </div>
               <button
-                ref={el => {
-                  if (el) {
-                    buttonRefs.current[idx] = el
-                  }
-                }}
+
                 className="text-white/50 text-white z-[999] flex gap-2 border text-lg h-20 w-32 rounded-full justify-center items-center">
                 View <ArrowRight />
               </button>

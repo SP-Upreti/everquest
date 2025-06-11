@@ -74,7 +74,7 @@ export default function Footer() {
         <div className='font-bold uppercase relative'>
           {/* Stroked text background */}
           <h2
-            style={{ WebkitTextStroke: "2px white" }}
+            style={{ WebkitTextStroke: "2px #838485" }}
             className="text-center text-transparent text-[14rem] font-bold"
           >
             EVERQUEST
@@ -82,7 +82,7 @@ export default function Footer() {
 
           {/* Gradient masked text overlay */}
           <motion.h2
-            className="text-white text-[14rem] font-bold absolute top-0 left-0 w-full h-full"
+            className="text-whit text-[14rem] font-bold absolute top-0 left-0 w-full h-full"
             style={{
               mask: textMask,
               WebkitMask: textMask

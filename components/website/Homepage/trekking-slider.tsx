@@ -13,7 +13,9 @@ import {
     useDotButton
 } from './EmblaCarouselDotButton'
 import AutoScroll from "embla-carousel-auto-scroll"
+import Autoplay from 'embla-carousel-autoplay' // autoplay plugin
 import Image from 'next/image'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 type PropType = {
     slides: {
@@ -32,7 +34,7 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
         {
             loop: true,
 
-        }, [AutoScroll({
+        }, [Autoplay({
             playOnInit: true,
             stopOnFocusIn: true,
             stopOnInteraction: false,
@@ -53,7 +55,7 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
     } = usePrevNextButtons(emblaApi)
 
     return (
-        <section className="w-full  mx-auto">
+        <section className="w-full  mx-auto relative">
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex touch-pan-y backface-hidden -ml-4 sm:-ml-6 xl:-ml-8">
                     {slides.map((data, index) => (
@@ -94,26 +96,14 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-[auto_1fr] justify-between gap-6 mt-7">
-                <div className="grid grid-cols-2 gap-2 items-center">
-                    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-                    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-                </div>
 
-                <div className="flex flex-wrap justify-end items-center -mr-[0.6rem]">
-                    {scrollSnaps.map((_, index) => (
-                        <DotButton
-                            key={index}
-                            onClick={() => onDotButtonClick(index)}
-                            className={`w-[2.6rem] h-[2.6rem] flex items-center justify-center rounded-full after:w-[1.4rem] after:h-[1.4rem] after:rounded-full after:content-[''] after:shadow-inner ${index === selectedIndex
-                                ? 'after:shadow-[inset_0_0_0_0.2rem_var(--text-body)]'
-                                : 'after:shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)]'
-                                }`}
-                        />
-                    ))}
-                </div>
+
+            <div className="flex justify-between items-center absolute top-1/2 -translate-y-1/2 w-full">
+                <button onClick={onPrevButtonClick} className='size-16 bg-white/10 flex justify-center items-center rounded-full'><ChevronLeft className='size-12' /></button>
+                <button onClick={onNextButtonClick} className='size-16 bg-white/10 flex justify-center items-center rounded-full'><ChevronRight className='size-12' /></button>
             </div>
-        </section>
+
+        </section >
     )
 }
 

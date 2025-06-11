@@ -21,7 +21,7 @@ export default function PartnerHome({ }: Props) {
               initial={{ scale: 0, opacity: 1 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.3 }}
-              className="relative size-16 p-1 bg-[rgba(255,255,255,0.05)]  rounded-full overflow-hidden flex justify-center items-center">
+              className="relative size-16 p-1 bg-white  rounded-full overflow-hidden flex justify-center items-center">
               <Image
                 src={AssociatedLogo1}
                 alt="logo"
@@ -34,7 +34,7 @@ export default function PartnerHome({ }: Props) {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.3 }}
 
-              className="relative size-16 p-1 bg-[rgba(255,255,255,0.05)]   rounded-full overflow-hidden flex justify-center items-center">
+              className="relative size-16 p-1 bg-white   rounded-full overflow-hidden flex justify-center items-center">
               <Image
                 src={AssociatedLogo2}
                 alt="logo"
